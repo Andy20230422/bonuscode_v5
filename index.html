@@ -21,8 +21,16 @@
       position: relative;
     }
     .logo-img {
-      height: 168px;;
-      margin-bottom: 12px;
+      height: 168px; /* 原本120px，放大40% */
+      margin-bottom: 16.8px; /* 原本12px，放大40% */
+      max-width: 100%;
+      width: auto;
+    }
+    @media (max-width: 600px) {
+      .logo-img {
+        height: 86px; /* 原本62px，放大40% */
+        margin-bottom: 16px;
+      }
     }
     h2 {
       font-size: 2.2rem;
@@ -149,21 +157,6 @@
     @keyframes modalShow {
       from { transform: translateY(40px) scale(0.93); opacity: 0;}
       to { transform: translateY(0) scale(1); opacity: 1;}
-    }
-    @media (max-width: 600px) {
-      .card-grid {
-        grid-template-columns: 1fr;
-        padding: 0.5rem 0.3rem;
-      }
-      .section-title {
-        font-size: 1.1rem;
-        padding-left: 0;
-      }
-      header {
-        padding: 1.2rem 0.2rem 0.7rem;
-      }
-      .logo-img { height: 62px; }
-      h2 { font-size: 1.2rem; }
     }
   </style>
 </head>
